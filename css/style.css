@@ -63,6 +63,9 @@ a {
 .header_right_menu {
     margin-left: auto;
 }
+.header_menu>.page_studio>a {
+    color: #2196F3;
+}
 .header_menu_item>a, .header_right_menu_item>a {
     color: #757575;
 }
@@ -72,7 +75,6 @@ a {
 
 .main {
 }
-
 .hero {
     background-color: #2F303A;
     height: 600px;
@@ -104,8 +106,7 @@ a {
     border-radius: 4px;
     font-weight: 700;
     letter-spacing: 0.96px;
-    padding: 17px 46px;
-    display: inline-block;
+    padding: 11px 26px;
 }
 .hero_btn:hover {
     background: #1c8be5;
@@ -132,7 +133,6 @@ a {
     letter-spacing: 0.42px;
     line-height: 24px;
 }
-
 
 .do {
     padding: 94px 0 0;
@@ -162,7 +162,7 @@ a {
     background: #F5F4FA;
     padding: 94px 0;
 }
-.team_cards, .list_items_1, .list_items_2, .list_items_3 {
+.team_cards {
     display: flex;
     gap: 30px;
 }
@@ -172,15 +172,17 @@ a {
     border-radius: 0 4px 4px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
 }
+.team_text {
+    padding: 30px 0;
+}
 .team_card_title {
-    padding: 30px 0 0;
     text-align: center;
     letter-spacing: 0.48px;
     font-size: 16px;
     font-weight: 500;
 }
 .team_card_desc {
-    padding: 10px 0 30px;
+    padding: 10px 0 0;
     text-align: center;
     letter-spacing: 0.48px;
     color: #757575;
@@ -212,6 +214,9 @@ a {
 }
 
 /*portfolio*/
+.header_menu>.page_portfolio>a {
+    color: #2196F3;
+}
 .hero_portfolio {
     padding: 94px 0 50px;
 }
@@ -224,28 +229,35 @@ a {
     background: #F5F4FA;
     color: #212121;
 }
-
 .list {
+    padding: 0 0 94px;
 }
-.list_items_1, .list_items_2, .list_items_3 {
-    padding: 0 0 30px;
+.list_items {
+    display: flex;
+    gap: 30px;
+    flex-flow: wrap;
 }
 .list_item {
     background: #fff;
-    height: 404px;
     border: 1px solid #EEE;
+    flex: 1 1 30%;
+}
+.list_item img {
+    width: 100%;
+    height: 294px;
+    object-fit: cover;
+}
+.list_text {
+    padding: 20px;
 }
 .list_item_title {
-    padding: 20px 0 0;
-    margin: 0 24px;
+    margin: 0 0 10px;
     font-size: 18px;
     letter-spacing: 1.08px;
-    line-height: 36px;
     font-weight: 700;
 }
 .list_item_desc {
     letter-spacing: 0.48px;
     color: #757575;
-    margin: 0 24px;
     font-size: 16px;
 }
