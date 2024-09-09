@@ -178,7 +178,7 @@ a {
     display: none;
 }
 
-.do_card:hover>.do_text_hidden {
+.do_card:hover .do_text_hidden {
     display: flex;
 }
 
@@ -267,27 +267,29 @@ a {
     flex: 1 1 30%;
     position: relative;
 }
-.list_item img {
-    width: 100%;
+.list_img {
     height: 294px;
+    position: relative;
+}
+.list_img img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 .list_text_hidden {
     background: rgba(33, 150, 243, 0.90);
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 294px;
+    inset: 0; /* розтягнути по всьому, замість: t0, r0, w100%; */
     font-size: 18px;
     letter-spacing: 0.54px;
     color: #fff;
-    padding: 63px 24px;
+    padding: 24px;
     line-height: 28px;
     display: none;
+    align-items: center;
 }
-.list_item:hover>.list_text_hidden {
-    display: block;
+.list_item:hover .list_text_hidden {
+    display: flex;
 }
 .list_text {
     padding: 20px;
