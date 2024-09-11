@@ -63,18 +63,73 @@ a {
     display: flex;
     gap: 50px;
 }
-.header_right_menu {
-    margin-left: auto;
-}
 .header_menu>.page_studio>a {
     color: #2196F3;
 }
+
+.header_menu>.header_menu_item {
+    position: relative;
+}
+
+.header_menu>.header_menu_item:hover .sub_menu {
+    display: block;
+}
+
 .header_menu_item>a, .header_right_menu_item>a {
     color: #757575;
 }
+
+.sub_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 29px 0 0;
+    display: none;
+    z-index: 1;
+}
+
+.header_sub_menu_item, .sub_sub_menu_item {
+    background: #F5F4FA;
+    padding: 7px 10px;
+}
+
+.header_sub_menu_item a {
+    color: #171717;
+    text-decoration: none;
+}
+
+.header_sub_menu_item:hover {
+    background: #2196F3;
+}
+
+.header_sub_menu_item:hover > a, .sub_sub_menu_item:hover > a {
+    color: #fff;
+}
+
+.sub_sub_menu {
+    position: absolute;
+    top: 83.5%;
+    left: -40%;
+    display: none;
+    z-index: 1;
+}
+
+.header_sub_menu_item:hover .sub_sub_menu {
+    display: block;
+}
+
+.sub_sub_menu_item:hover {
+    background: #2196F3;
+}
+
+
 .header_menu_item>a:hover, .header_right_menu_item>a:hover {
     color: #2196F3;
 }
+.header_right_menu {
+    margin-left: auto;
+}
+
 
 .main {
 }
