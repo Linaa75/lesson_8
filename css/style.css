@@ -132,8 +132,7 @@ a {
 }
 
 .hero {
-    background: url(../img/studio/Img.jpg) no-repeat, #2F303A;
-    object-fit: cover;
+    background: url(../img/studio/Img.jpg) no-repeat 50% / cover, #2F303A;
     height: 600px;
     display: flex;
     align-items: center;
