@@ -142,8 +142,7 @@ a {
 
 .hero::before {
     background: rgba(47, 48, 58, 0.40);
-    height: 600px;
-    width: 100%;
+    inset: 0;
     content: '';
     position: absolute;
     z-index: -1;
@@ -193,17 +192,34 @@ a {
 
 .about_card {
     flex: 1 1 25%; /* 100% / 4 частини*/
+    position: relative;
+    padding: 140px 0 0;
 }
 
-.about_card_img {
-    background: #F5F4FA;
-    border-radius: 4px;
+.about_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 120px;
-    width: 270px;
-    margin: 0 0 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #F5F4FA url(../img/studio/antenna.svg) no-repeat 50%/70px;
+    border-radius: 6px;
+}
+
+.about_card:nth-child(2)::before {
+    content: '';
+    background: #F5F4FA url(../img/studio/clock.svg) no-repeat 50%/70px;
+}
+
+.about_card:nth-child(3)::before {
+    content: '';
+    background: #F5F4FA url(../img/studio/diagram.svg) no-repeat 50%/70px;
+}
+
+.about_card:nth-child(4)::before {
+    content: '';
+    background: #F5F4FA url(../img/studio/astronaut.svg) no-repeat 50%/70px;
 }
 
 .about_title {
