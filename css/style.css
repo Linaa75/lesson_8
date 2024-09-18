@@ -37,6 +37,7 @@ body {
 
 a {
     text-decoration: none;
+    display: block;
 }
 
 .container {
@@ -289,7 +290,7 @@ a {
 }
 .team_card {
     background-color: #fff;
-    height: 368px;
+    height: 100%;
     border-radius: 0 4px 4px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
 }
@@ -309,29 +310,149 @@ a {
     color: #757575;
 }
 
+.team__card__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 32px 30px;
+}
+
+.link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    transition: all .3s linear;
+    line-height: 10px;
+}
+
+.link svg {
+    height: 20px;
+    width: 20px;
+    fill: #AFB1B8;
+    transition: all .3s linear;
+}
+
+.link a:hover {
+    background: #2196F3;  
+}
+
+.link a:hover svg {
+    fill: #fff;
+}
+
+.customers {
+    padding: 94px 0;
+}
+
+.customers__title {
+    color: #212121;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1.08px;
+    padding: 0 0 50px;
+}
+
+.customer__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.customer__link {
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+.customer__link a {
+    fill: #AFB1B8;
+    padding: 16px 0;
+    transition: all .3s ease;
+}
+
+.customer__link svg {
+    height: 60px;
+    width: 160px;
+}
+
+.customer__link a:hover {
+    fill: #2196F3;
+    transition: all .3s ease;
+}
+
+.customer__link:hover {
+    border: 1px solid #2196F3;
+    transition: all .3s ease;
+}
+
+
 .footer {
     background-color: #2F303A;
     padding: 60px 0;
 }
+
+.footer__part {
+    display: flex;
+    justify-content: start;
+    gap: 70px;
+}
+
+.footer__left, .footer__right {
+    display: flex;
+    flex-direction: column;
+}
+
 .footer_logo {
     display: inline-block;
     margin-bottom: 20px;
 }
+
 .footer_menu {
     display: flex;
     flex-flow: column;
-    gap: 9px;
+    gap: 5px;
 }
+
 .footer_menu_desc {
     color: #fff;
+    line-height: 24px;
 }
+
 .footer_menu_item {
     color: #757575;
     text-decoration: none;
     align-self: flex-start;
+    line-height: 24px;
 }
+
 .footer_menu_item:hover {
     color: #1c8be5;
+}
+
+.footer__right__title {
+    color: #FFF;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    padding: 7px 0 20px;
+}
+
+.footer__right__links {
+    display: flex;
+    gap: 10px;
+}
+
+.footer__link {
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+}
+
+.footer__link svg {
+    fill: #fff;
 }
 
 /*portfolio*/
