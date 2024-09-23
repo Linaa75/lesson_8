@@ -60,6 +60,12 @@ a {
 .header_logo {
     margin-right: 93px;
 }
+
+.header_logo svg {
+    width: 145px;
+    height: 31px;
+}
+
 .header_menu, .header_right_menu  {
     display: flex;
     gap: 50px;
@@ -411,6 +417,11 @@ a {
 .footer_logo {
     display: inline-block;
     margin-bottom: 20px;
+}
+
+.footer_logo svg {
+    width: 145px;
+    height: 31px;
 }
 
 .footer_menu {
