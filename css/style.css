@@ -52,24 +52,22 @@ a {
     letter-spacing: 0.28px;
     border-bottom: 1px solid #ECECEC;
 } 
+
 .header_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header_logo {
     margin-right: 93px;
-}
-
-.header_logo svg {
-    width: 145px;
-    height: 31px;
 }
 
 .header_menu, .header_right_menu  {
     display: flex;
     gap: 50px;
 }
+
 .header_menu>.page_studio>a {
     color: #2196F3;
 }
@@ -138,6 +136,10 @@ a {
     margin-left: auto;
 }
 
+.header_burger {
+    display: none;
+}
+
 .hero {
     background: url(../img/studio/Img.jpg) no-repeat 50% / cover, #2F303A;
     height: 600px;
@@ -162,6 +164,7 @@ a {
     margin: 0 auto;
     font-weight: 900;
     letter-spacing: 2.64px;
+    line-height: 60px;
     text-transform: uppercase;
     width: 700px;
     margin-bottom: 30px;
@@ -235,10 +238,12 @@ a {
     font-weight: 700;
     letter-spacing: 0.42px;
 }
+
 .about_text {
     color: #757575;
     letter-spacing: 0.42px;
     line-height: 24px;
+    text-align: justify;
 }
 
 .do {
@@ -290,25 +295,30 @@ a {
     background: #F5F4FA;
     padding: 94px 0;
 }
+
 .team_cards {
     display: flex;
     gap: 30px;
 }
+
 .team_card {
     background-color: #fff;
     height: 100%;
     border-radius: 0 4px 4px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
 }
+
 .team_text {
     padding: 30px 0;
 }
+
 .team_card_title {
     text-align: center;
     letter-spacing: 0.48px;
     font-size: 16px;
     font-weight: 500;
 }
+
 .team_card_desc {
     padding: 10px 0 0;
     text-align: center;
@@ -469,44 +479,54 @@ a {
 }
 
 /*portfolio*/
+
 .header_menu>.page_portfolio>a {
     color: #2196F3;
 }
+
 .hero_portfolio {
     padding: 94px 0 50px;
 }
+
 .hero_btns {
     display: flex;
     gap: 8px;
     justify-content: center;
 }
+
 .hero_btn_item {
     background: #F5F4FA;
     color: #212121;
 }
+
 .list {
     padding: 0 0 94px;
 }
+
 .list_items {
     display: flex;
     gap: 30px;
     flex-flow: wrap;
 }
+
 .list_item {
     background: #fff;
     border: 1px solid #EEE;
     flex: 1 1 30%;
     position: relative;
 }
+
 .list_img {
     height: 294px;
     position: relative;
 }
+
 .list_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .list_text_hidden {
     background: rgba(33, 150, 243, 0.90);
     position: absolute;
@@ -519,21 +539,204 @@ a {
     display: none;
     align-items: center;
 }
+
 .list_item:hover .list_text_hidden {
     display: flex;
 }
+
 .list_text {
     padding: 20px;
 }
+
 .list_item_title {
     font-size: 18px;
     letter-spacing: 1.08px;
     font-weight: 700;
     line-height: 36px;
 }
+
 .list_item_desc {
     letter-spacing: 0.48px;
     color: #757575;
     font-size: 16px;
     line-height: 30px;
+}
+
+
+
+/*MEDIA*/
+@media (max-width: 1200px) {
+    .header_logo {
+        margin-right: 40px;
+    }
+
+    .header_menu, .header_right_menu {
+        gap: 20px;
+    }
+
+    .about {
+        padding: 60px 0 60px;
+    }
+
+    .do, .customers {
+        display: none;
+    }
+
+    .team {
+        padding: 60px 0 60px;
+    }
+
+    .team_title {
+        margin: 0 0 30px;
+    }
+
+    .team_cards {
+        flex-wrap: wrap;
+    }
+
+    .team_card {
+        flex: 1 1 45%;
+    }
+
+    .team_card img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .team_text {
+        padding: 30px 0 16px;
+    }
+
+    .team__card__links {
+        justify-content: center;
+        padding: 0 32px 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about_cards {
+        flex-wrap: wrap;
+    }
+
+    .about_card {
+        flex: 1 1 45%;
+    }
+
+    /* portfolio */
+
+    .hero_portfolio {
+        padding: 60px 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 19px 0 20px;
+    }
+
+    .header_logo img {
+        width: 134px;
+        height: 28px;
+    }
+
+    .header_menu, .header_right_menu {
+        display: none;
+    }
+
+    .header_burger {
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 16px;
+        cursor: pointer;
+    }
+
+    .header_burger::before, .header_burger::after, .header_burger span {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background: #000;
+    }
+
+    .header_burger span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .header_burger::after {
+        top: auto;
+        bottom: 0;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero_title {
+        font-size: 26px;
+        width: 360px;
+        line-height: 42px;
+        letter-spacing: 1.56px;
+    } 
+
+    /* portfolio */
+
+    .list {
+        padding: 0 0 60px;
+    }
+
+    .list_item {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 678px) {
+    /* portfolio */
+
+    .hero_btns {
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .about_card {
+        flex: 1 1 50%;
+    }
+
+    .about_title {
+        text-align: center;
+    }
+
+    .footer__right {
+        display: none;
+    }
+
+    .footer__part {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__left {
+        align-items: center;
+    }
+
+    .footer_menu a {
+        margin: 0 auto;
+    }
+
+    /* portfolio */
+
+    .list_item {
+        flex: 1 1 50%;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero_title {
+        width: 270px;
+    }
 }
