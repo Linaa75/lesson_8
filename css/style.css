@@ -627,6 +627,14 @@ a {
     .hero_portfolio {
         padding: 60px 0 40px;
     }
+
+    .list {
+        padding: 0 0 60px;
+    }
+
+    .list_item {
+        flex: 1 1 45%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -681,23 +689,13 @@ a {
         line-height: 42px;
         letter-spacing: 1.56px;
     } 
-
-    /* portfolio */
-
-    .list {
-        padding: 0 0 60px;
-    }
-
-    .list_item {
-        flex: 1 1 45%;
-    }
 }
 
 @media (max-width: 678px) {
     /* portfolio */
 
     .hero_btns {
-        justify-content: left;
+        justify-content: flex-start;
         flex-wrap: wrap;
     }
 }
